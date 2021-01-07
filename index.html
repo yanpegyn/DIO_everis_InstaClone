@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Instagram</title>
+    <!--
+        Projeto feito com base nas aulas ministradas por Gabriela Pinheiro:
+        https://www.instagram.com/ga.brielapinheiro/
+        https://github.com/SpruceGabriela
+        https://www.linkedin.com/in/gabrielapinheiro129/
+    -->
+</head>
+<body>
+    <!--Container pai == instagram-wrapper-->
+    <div class="instagram-wrapper">
+        <!--Parte esquerda (celular) == instagram-phone-->
+        <div class="instagram-phone">
+            <!--Imagem do celular-->
+            <img src="./img/instagram-celular.png" alt="celular">
+        </div>
+        <!--Parte direita (continuar com sua conta) == instagram-continue-->
+        <div class="instagram-continue">
+            <!--div.group-->
+            <!--Grupo de cima-->
+            <div class="group">
+                <!--Logotipo do Instagram-->
+                <img src="./img/instagram-logo.png" class="instagram-logo" alt="instagram logo">
+                <!--Div para arredondar imagem == profile-photo-->
+                <div class="profile-photo">
+                    <!--Imagem de perfil-->
+                    <img src="./img/perfil-instagram.jpg" alt="foto de perfil">
+                </div>
+                <!--a*2-->
+                <!--Botão Continue == instagram-login-->
+                <a href="#" class="instagram-login">Continue como yanpegyn</a>
+                <!--Link remover conta == instagram-logout-->
+                <a href="#" class="instagram-logout">Remover conta</a>
+            </div>
+            <!--div.group-->
+            <!--Grupo do meio-->
+            <div class="group">
+                <!--Texto == not-account-->
+                <p class="not-account">Não é yanpegyn?</p>
+                <p class="not-account">
+                    <!--texto com cor azul == link-blue-->
+                    <span class="link-blue">Alternar contas</span>
+                    ou
+                    <span class="link-blue">Inscreva-se</span>
+                </p>
+            </div>
+            <!--Baixe o App == get-the-app-->
+            <div class="get-the-app">
+                <p class="get-app">Baixe o aplicativo</p>
+                <!--Div flex == download-->
+                <div class="download">
+                    <!--Botão download Apple == app-download nth-child(1)-->
+                    <a href="#" class="app-download"></a>
+                    <!--Botão download Google == app-download nth-child(2)-->
+                    <a href="#" class="app-download"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

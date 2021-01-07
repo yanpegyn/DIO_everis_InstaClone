@@ -1,0 +1,177 @@
+/* Resetar estilos padrão == * */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+body {
+    width: 100%; /* largura maxima */
+    min-height: 100vh; /* altura minima == espaço disponivel na tela */
+    background-color: rgb(243, 243, 243);
+    margin: 0;
+    padding: 0;
+    display: flex; /* Coloca divs lado a lado */
+    justify-content: center; /* Centraliza as divs na página */
+}
+
+.instagram-wrapper {
+    display: flex; /* Coloca itens em linha */
+    align-items: center; /* eixo Y */
+    justify-content: start; /* eixo X (start == esquerda pra direita) */
+    width: 60%; /* Largura do bloco central */
+    height: 100vh; /* Altura == espaço disponivel na tela */
+}
+
+.instagram-phone {
+    display: flex; /* Coloca itens em linha */
+    align-items: center; /* eixo Y */
+    justify-content: center; /* eixo X */
+    width: 50%; /* 50% do container parente */
+}
+
+.instagram-phone img {
+    height: 50rem; /* Altura da imagem */
+}
+
+.instagram-continue {
+    display: flex; /* Coloca itens em linha */
+    flex-direction: column; /* direção do alinhamento flex (column == fica um embaixo do outro) */
+    /* o flex-direction: column; faz que o alinhamento seja virado tbm */
+    align-items: center; /* agora horizontal (eixo X) */
+    justify-content: space-around; /* agora vertical (eixo Y) (space-around == Distribuir itens uniformemente com meio espaço envolta de cada item) */
+    width: 50%;
+    min-height: 34rem;
+}
+
+.group {
+    display: flex; /* Coloca itens em linha */
+    flex-direction: column; /* direção do alinhamento flex (column == fica um embaixo do outro) */
+    justify-content: space-between; /* (space-between == Distribuir itens uniformemente com primeiro item no start e ultimo no end) */
+    align-items: center; /* agora horizontal (eixo X) */
+    background-color: #ffffff;
+    width: 100%;
+    padding: 1.3rem 0; /* Em cima e embaixo, lados */
+    border: 1px solid lightgray;
+}
+
+/* Primeiro item com class group */
+.group:nth-child(1) {
+    min-height: 19rem;
+}
+
+/* Tamanho logotipo instagram */
+.instagram-logo {
+    height: 3rem;
+}
+
+/* Centraliza e arredonda a imagem na div */
+.profile-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* tamanho da imagem dentro da class profile-photo */
+.profile-photo img {
+    height: 6rem;
+}
+
+/* Botão login */
+.instagram-login {
+    background-color: #0095f6;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 4px;
+}
+/* Texto Remover conta */
+.instagram-logout {
+    color: #0095f6;
+    margin-top: 1rem;
+}
+
+/* classe mudar cor do texto 'Não é ...' */
+.not-account {
+    color: rgb(160, 160, 160); /* Cinza escuro */
+}
+
+/* classe mudar cor dos links 'Alternar'/'Inscreva-se' */
+.link-blue {
+    color: #0095f6;
+}
+
+/* Todos itens um abaixo do outro e centralizados em todos eixos */
+.get-the-app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 1.3rem 0;
+}
+
+/* Colocar botões lado a lado */
+.download {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly; /* Mesmo espaço dos lados como no meio */
+    align-items: center;
+    padding: 1rem;
+}
+
+/* Tamanhos botão download */
+.app-download {
+    height: 3rem;
+    width: 10rem;
+    background-size: cover;
+}
+
+/* Primeiro filho == Apple */
+.app-download:nth-child(1) {
+    background-image: url('./img/apple-button.png');
+}
+
+/* Primeiro filho == Google */
+.app-download:nth-child(2) {
+    background-image: url('./img/googleplay-button.png');
+}
+
+
+/* media queries */
+
+/* Tablet */
+@media (max-width: 1024px) {
+    .instagram-wrapper {
+        width: 90%;
+    }
+}
+
+/* Celular */
+@media (max-width: 650px) {
+    body {
+        background-color: #ffffff;
+    }
+
+    .instagram-wrapper {
+        width: 90%;
+    }
+
+    /* Some a imagem do celular */
+    .instagram-phone {
+        display: none;
+    }
+
+    /* aumenta a parte da direita para ocupar 100% */
+    .instagram-continue {
+        width: 100%;
+    }
+    
+    .group {
+        border: 1px solid transparent;
+    }
+}
